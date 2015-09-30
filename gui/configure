@@ -1,0 +1,34 @@
+#!/bin/sh
+
+PKG_CONFIG=`which pkg-config`
+
+libs="gdk-2.0 glib-2.0 gtk+-2.0 gobject-2.0"
+CLIBS=""
+CFLAGS=""
+
+if [ ! -x "$PKG_CONFIG" ]; then
+  echo "cPige GUI requires pkg-config to build."
+  exit 1
+fi
+
+for lib in $libs; do
+  echo -ne "Checking $lib... "
+  $PKG_CONFIG --exists $lib >/dev/null 2>&1
+  if [ "$?" = "0" ]; then
+    echo "yes"
+  else
+    echo "no"
+    echo "Please install library: $lib."
+    exit 1
+  fi
+done
+
+CLIBS="$CLIBS `pkg-config --libs $libs`"
+CFLAGS="$CFLAGS `pkg-config --cflags $libs`"
+
+echo "CLIBS: $CLIBS"
+echo "CFLAGS: $CFLAGS"
+
+cat "Makefile.in" | sed -e "s,@CLIBS@,$CLIBS," | sed -e "s,@CFLAGS@,$CFLAGS," >Makefile
+
+echo "To compile now type make, then prey."

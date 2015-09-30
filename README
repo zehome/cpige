@@ -1,0 +1,35 @@
+cPige help. cPige is a Laurent Coustet product.
+For more informations about me and my software,
+please visit http://ed.zehome.com/
+
+Usage: ./cpige -c path/to/cpige.conf
+    -c path/to/cpige.conf.
+
+
+=========== GUI ===========
+
+A GTK2 GUI is now available for cPige 1.5.
+To use it:
+
+cd gui; ./configure && make
+
+now, copy cpige binary somewere the GUI will find in PATH, then launch
+cpigeGUI.
+
+Enjoy :)
+
+=========== Upgrading ===========
+Prior to version 1.4, cPige uses command line options.
+In 1.4, thoses command lines were removed, to leave the place
+to a config file.
+
+But cPige is back compatible. You should be able to use old command
+line options, by compiling cPige with the NOCONFIG flag.
+
+Example:
+
+NOCONFIG=1 make clean all
+
+Then cPige should work as prior to 1.4. (Note that new functionnalities comming
+from 1.4 and more will not be backported to commandLine options, excepted
+if this is a request of users.)

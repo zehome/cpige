@@ -1,0 +1,15 @@
+CC=gcc
+CLIBS   = ${LDFLAGS}
+CFLAGS += -DUSG -Wall -DWIN32
+
+OBJS = cpige.o mytime.o debug.o tool.o pool.o configlib.o mynet.o id3.o icy.o
+
+all: cpige
+
+cpige: $(OBJS)
+	$(CC) $(CLIBS) $(CFLAGS) $(OBJS) -o cpige.exe -lws2_32 -static
+	$(CC) $(CLIBS) $(CFLAGS) $(OBJS) -o configurator/cpige.exe -mwindows -lws2_32 -static
+	chmod 666 cpige.exe
+
+clean:
+	rm -rf *.o cpige.exe

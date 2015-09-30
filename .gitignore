@@ -1,0 +1,7 @@
+*.o
+*.conf
+gui/Makefile
+gui/cpigeGUI
+cpige
+*.log
+*.pid

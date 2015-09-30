@@ -1,0 +1,314 @@
+# translation of french.po to Français
+# French translations for configurator package
+# Traduction anglaise du package configurator.
+# Copyright (C) 2006 THE configurator'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the configurator package.
+#
+# Laurent Coustet <ed@zehome.com>, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: french\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2006-07-17 23:01+0200\n"
+"PO-Revision-Date: 2006-04-11 22:02+0200\n"
+"Last-Translator: Laurent Coustet <ed@zehome.com>\n"
+"Language-Team: Français <fr@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: callbacks.c:51
+msgid "Open new configuration"
+msgstr "Ouvrir un fichier de configuration"
+
+#: callbacks.c:67
+msgid ""
+"No config file specified.\n"
+"Internal Error, aborting.\n"
+msgstr ""
+"Aucun fichier de configuration spécifié.\n"
+"Erreur interne, le programme va se terminer.\n"
+
+#: callbacks.c:77 main.c:61
+msgid ""
+"Error parsing config file.\n"
+"Aborting.\n"
+msgstr ""
+"Erreur de lecture du fichier de configuration.\n"
+"Annulation.\n"
+
+#: callbacks.c:87 main.c:69
+msgid ""
+"Configuration file is invalid.\n"
+"Aborting.\n"
+msgstr ""
+"Le fichier de configuration n'est pas valide.\n"
+"Annulation\n"
+
+#: callbacks.c:121 callbacks.c:165
+msgid ""
+"An error was detected during the configuration building.\n"
+"Settings are not acceptable. Please reconfigure cPige.\n"
+"This would happens for example if you've not added an URL.\n"
+msgstr ""
+"Une erreur à été détectée lors de la construction du fichier de "
+"configuration.\n"
+"Les paramètres ne sont pas acceptables. Veuillez reconfigurer cPige.\n"
+"Cette erreur peut survenir par exemple si vous n'avez pas spécifié "
+"d'adresse.\n"
+
+#: callbacks.c:129
+msgid ""
+"Unable to open your config file for writing.\n"
+"Please verify rights.\n"
+msgstr ""
+"Impossible d'ouvrir le fichier de configuration en écriture.\n"
+"Vérifiez les droits d'accès.\n"
+
+#: callbacks.c:185 callbacks.c:466
+msgid ""
+"Unable to open config file for writing.\n"
+"Settings will *NOT* be saved.\n"
+msgstr ""
+"Impossible d'ouvrir le fichier de configuration en écriture.\n"
+"Vérifiez les droits d'accès.\n"
+
+#: callbacks.c:225
+msgid ""
+"Warning, cPige is currently recording.\n"
+"Exiting will shutdown cPige.\n"
+"Do you really want to continue ?\n"
+msgstr ""
+"Attention, cPige est en cours d'enregistrement.\n"
+"Voulez vous vraiment quitter cPige?\n"
+
+#: callbacks.c:376
+msgid "You must save your configuration before launching cPige.\n"
+msgstr "Vous devez enregistrer votre configuration avant de lancer cPige.\n"
+
+#: callbacks.c:389 callbacks.c:407 interface.c:528
+msgid "Start"
+msgstr "Démarrer"
+
+#: callbacks.c:401
+msgid "Stop"
+msgstr "Arreter"
+
+#: callbacks.c:525
+msgid "Apply"
+msgstr "Appliquer"
+
+#: callbacks.c:609
+msgid "cPige existed.\n"
+msgstr "cPige s'est terminé.\n"
+
+#: interface.c:121
+msgid "cPige Configurator by Laurent Coustet"
+msgstr "cPige, par Laurent Coustet"
+
+#: interface.c:223
+msgid "Add an URL to the pool."
+msgstr "Ajouter une adresse"
+
+#: interface.c:241
+msgid "Add"
+msgstr "Ajouter"
+
+#: interface.c:250
+msgid "Remove an URL from the pool."
+msgstr "Supprimer une adresse"
+
+#: interface.c:268
+msgid "Del"
+msgstr "Supprimer"
+
+#: interface.c:285
+msgid "Save directory"
+msgstr "Répertoire d'enregistrement"
+
+#: interface.c:292
+msgid "File selection"
+msgstr "Sélectionnez un fichier"
+
+#: interface.c:305
+msgid "Do you want cPige to store his action in a logfile ?"
+msgstr "Voulez vous que cPige note ses actions dans un fichier de log?"
+
+#: interface.c:334
+msgid "Open"
+msgstr "Ouvrir"
+
+#: interface.c:354
+msgid "Split files every"
+msgstr "Découper toute les"
+
+#: interface.c:364
+msgid "Each n \"Hour\" or \"Minutes\", cPige will create a new file."
+msgstr ""
+"Toute les n \"Heures\" ou \"Minutes\", cPige va créer un nouveau fichier."
+
+#: interface.c:371
+msgid "Hour(s)"
+msgstr "Heure(s)"
+
+#: interface.c:372
+msgid "Minutes"
+msgstr "Minutes"
+
+#: interface.c:374
+msgid "<b>Pige mode only</b>"
+msgstr "<b>Mode pige seulement</b>"
+
+#: interface.c:380
+msgid "<b>Mandatory parameters</b>"
+msgstr "<b>Paramètres obligatoires</b>"
+
+#: interface.c:405
+msgid "pige mode"
+msgstr "pige mode"
+
+#: interface.c:411
+msgid ""
+"Do you want cPige to archive the stream in Pige mode?\n"
+"In pige mode, cPige will cut the stream using a time base."
+msgstr ""
+"Voulez vous que cPige travaille en mode pige ?\n"
+"En mode pige, cPige va couper les fichiers par tranches horaires, et non "
+"plus par changement de titre."
+
+#: interface.c:415
+msgid "week backup"
+msgstr "mode semaine"
+
+#: interface.c:421
+msgid "Do you want cPige to archive a complete week of streaming?"
+msgstr "Voulez vous que cPige enregistre une semaine complete de flux ?"
+
+#: interface.c:424
+msgid "pige meta"
+msgstr "pige meta"
+
+#: interface.c:430
+msgid ""
+"Do you want cPige to add ID3 tags to your piged files (Only available using "
+"pige mode)"
+msgstr ""
+"Voulez vous que cPige ajoute des tags ID3 aux fichiers créés avec notament "
+"le nom de la radio ? (Seulement en mode pige)"
+
+#: interface.c:433
+msgid "quiet mode"
+msgstr "Silencieux"
+
+#: interface.c:439
+msgid ""
+"Do you want cPige to gives you the status of the stream grabbing ? Like the "
+"title of the song played, the time cPige is running, and so on.\n"
+"\n"
+"Note that this parameter is useless starting cPige with the GUI."
+msgstr ""
+"Voulez vous que cPige vous informe en console de l'état de la récupération "
+"du stream ?"
+
+#: interface.c:443
+msgid "background"
+msgstr "Tâche de fond"
+
+#: interface.c:449
+msgid ""
+"Do you want to run cPige in background mode. <b>This option is currently "
+"ONLY available under UNIX systems.</b>"
+msgstr ""
+"Voulez vous que cPige tourne en mode \"background\" ? <b>Fonctionnalitée "
+"accessible UNIQUEMENT pour les systèmes UNIX.</b>"
+
+#: interface.c:452
+msgid "use numbers"
+msgstr "préfixer"
+
+#: interface.c:459
+msgid ""
+"Should cPige prefix songs with a unique number ? (UNIX only, with pige mode "
+"Disabled)"
+msgstr ""
+"cPige doit il préfixer les  chansons récupérées d'un identifiant unique ? "
+"<b>Uniquement sous UNIX</b>"
+
+#: interface.c:469
+msgid "How many songs cPige should skip before starting recording"
+msgstr "Combien de chanson cPige doit ignorer avant de commencer son travail ?"
+
+#: interface.c:478
+msgid ""
+"This entry is used by cPige to detect if the new title sent by the webradio "
+"is a \"next title\" information, or a real new title."
+msgstr ""
+"Ce champ permet a cPige de ne pas réagir lorsque certaine radios changent le "
+"titre d'une chanson pour annoncer le titre avenir. Mettez par exemple \"A "
+"suivre\" pour fréquence3."
+
+#: interface.c:481
+msgid "<b>Extra Parameters</b>"
+msgstr "<b>Paramètres superflus</b> "
+
+#: interface.c:509
+msgid "This button is used to start / stop cPige recording"
+msgstr "Ce bonton permet de lancer cPige directement depuis l'interface."
+
+#: interface.c:540
+msgid "Current song"
+msgstr "En ce moment"
+
+#: interface.c:548
+msgid "Next song"
+msgstr "Prochaine chanson"
+
+#: interface.c:564
+msgid "This is the title of the song currently recording"
+msgstr "C'est le titre de la chanson actuellement enregistré."
+
+#: interface.c:575
+msgid "This is the title of the next song we are going to record."
+msgstr "C'est le titre de la prochaine chanson qui va être jouée."
+
+#: interface.c:584
+msgid "timeleft"
+msgstr "temps restant"
+
+#: interface.c:586
+msgid "<b>Stream status</b>"
+msgstr "<b>Status du stream</b>"
+
+#: interface.c:772
+msgid "Add an URL"
+msgstr "Ajouter une adresse"
+
+#: interface.c:798
+msgid "Type the URL of the stream."
+msgstr "Tapez l'adresse du stream"
+
+#: interface.c:841
+msgid "Select a logfile"
+msgstr "Sélectionner un fichier de log"
+
+#: interface.c:897
+msgid "Confirm"
+msgstr "Confirmer"
+
+#: interface.c:904
+msgid "Warning, using new will destroy all unsaved settings."
+msgstr ""
+"Attention, utiliser le bouton nouveau va détruire tous les paramètres non "
+"sauvegardés."
+
+#: main.c:240
+msgid "Invalid config file: no savedirectory specified.\n"
+msgstr ""
+"Fichier de configuration invalide: le répertoire de sauvegarde n'a pas été "
+"spécifié.\n"
+
+#: main.c:437
+msgid "Invalid configuration: no URL specified.\n"
+msgstr ""
+"Fichier de configuration invalide: aucune adresse de serveur spécifiée.\n"

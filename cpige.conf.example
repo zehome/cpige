@@ -1,0 +1,133 @@
+/////////////////////////////////////////////////////////////
+//               ____                                      //
+//              /\  _`\   _  Backuping tool for webradios  //
+//           ___\ \ \L\ \/\_\     __      __               //
+//          /'___\ \ ,__/\/\ \  /'_ `\  /'__`\             //
+//         /\ \__/\ \ \/  \ \ \/\ \L\ \/\  __/             //
+//         \ \____\\ \_\   \ \_\ \____ \ \____\            //
+//          \/____/ \/_/    \/_/\/___L\ \/____/            //
+//                                /\____/                  //
+//   (c)      Laurent Coustet     \_/__/                   //
+// ------------------------------------------------------- //
+//                                                         //
+// This is cPige config file example                       //
+// Lines starting with // are ignored. They are comments.  //
+// cPige was written by Laurent Coustet <ed@debian-fr.net> //
+// ------------------------------------------------------- //
+// Available at http://ed.zehome.com/?page=cpige           //
+/////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////
+////////////                 HELP               /////////////
+
+// Many of the config options are boolean
+// The could be Enabled (1) or Disabled (0).
+// You must not specify "false" "disabled "true" or "enabled"
+// in all parameters below. You must use "1" or "0" to enable
+// or disable a boolean option. Defaults are shown just
+// before the option in comment sections.
+//
+// Enjoy using cPige!
+
+
+////////////////////////////////////////////////////////////
+////////////        Streams Configuration       ////////////
+
+// You could specify as many stream as you want.
+// Defining multiple streams is good for safety as if
+// a server is going down, cPige will try to connect
+// to another server.
+
+url = "http://insomnie.relay.frequence3.net:8000/"
+url = "http://liberta.relay.frequence3.net:8000/"
+url = "http://ganymede.relay.frequence3.net:8000/"
+url = "http://clubby.relay.frequence3.net:8000/"
+
+////////////////////////////////////////////////////////////
+////////////           Save directory           ////////////
+
+// Where should I store data ?
+//savedirectory = "/home/ed/frequence3/"
+savedirectory = "./"
+
+// Should I backup a complete week of work ?
+// (Disabled by default)
+weekbackup = 0
+
+// Where to store log file ?
+logfile = "./cpige.log"
+
+////////////////////////////////////////////////////////////
+////////////         Pige mode options          ////////////
+
+// Enable/Disable pige Mode
+// (Disabled by default)
+pigemode   = 0
+
+// Do you want cpige to write id3 tags (for mp3 only) when
+// running into pige mode ?
+// (Enabled by default)
+pigemeta   = 1
+
+// Thoses options will let you choose how cPige will cut
+// the stream. They are only revelent if pigemode is enabled
+
+// What type of cut you want ?
+//
+// h => Hour based cut
+// m => Minute based cut
+//
+// (m is the default)
+cuttype   = "m"
+
+// How many hour(s)/minute(s) to backup ? 
+// (depends of cuttype)
+// (30 minutes is the default)
+cutdelay  = 30
+
+
+////////////////////////////////////////////////////////////
+////////////          General options           ////////////
+
+// Locale settings
+// ONLY FOR UNIX systems.
+// This could be defined to change directories name created
+// in weekbackup mode (pige mode).
+// (Default C) (Example: fr_FR)
+locale = "C"
+
+// Setting this option will prevent cpige from writing
+// to standard output the status of the backup.
+// (This option is turned 1 when running in background)
+// ONLY FOR UNIX
+// (Disabled by default)
+quietmode  = 0
+
+// Do you want cpige to run in background ? (as a daemon)
+// (Disabled by default)
+background = 0
+
+// Should cPige add nnnnn - Artist - Title to 
+// filenames saved with pige mode disabled.
+// (Disabled by default)
+usenumbers = 0
+
+// Where should I write my pid file ?
+// Only for UNIX systems
+pidfile = "/var/run/cpige.pid"
+
+// Do you want to skip some songs before cPige backup them ?
+// (Default is 0)
+skipsongs = 0
+
+// Some webradios are setting up a system informing you
+// on the next song that will be played.
+// To help cpige avoiding cutting songs in non pige mode
+// as the songtitle changed, you should define this variable
+// (Default to "A suivre")
+nexttitle = "A suivre"
+
+// If you want you could tell cPige to stop after "n" hours or "minutes"
+// To do so, uncomment the following line
+//
+//timetostop = "1m"

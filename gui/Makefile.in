@@ -1,0 +1,14 @@
+CFLAGS += @CFLAGS@ -I..
+CLIBS += @CLIBS@
+CC := gcc
+
+all: configurator
+
+OBJS = callbacks.o interface.o support.o main.o configlib.o
+
+configurator: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o cpigeGUI $(CLIBS)
+
+clean:
+	rm -f *.o
+	rm -f configurator
