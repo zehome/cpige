@@ -38,10 +38,10 @@
 // a server is going down, cPige will try to connect
 // to another server.
 
-url = "http://insomnie.relay.frequence3.net:8000/"
-url = "http://liberta.relay.frequence3.net:8000/"
-url = "http://ganymede.relay.frequence3.net:8000/"
-url = "http://clubby.relay.frequence3.net:8000/"
+url = "http://stream.frequence3.net:8000/"
+//url = "http://liberta.relay.frequence3.net:8000/"
+//url = "http://ganymede.relay.frequence3.net:8000/"
+//url = "http://clubby.relay.frequence3.net:8000/"
 
 ////////////////////////////////////////////////////////////
 ////////////           Save directory           ////////////
@@ -51,8 +51,7 @@ url = "http://clubby.relay.frequence3.net:8000/"
 savedirectory = "./"
 
 // Should I backup a complete week of work ?
-// (Disabled by default)
-weekbackup = 0
+weekbackup = 1
 
 // Where to store log file ?
 logfile = "./cpige.log"
@@ -62,12 +61,11 @@ logfile = "./cpige.log"
 
 // Enable/Disable pige Mode
 // (Disabled by default)
-pigemode   = 0
+pigemode   = 1
 
 // Do you want cpige to write id3 tags (for mp3 only) when
 // running into pige mode ?
-// (Enabled by default)
-pigemeta   = 1
+pigemeta   = 0
 
 // Thoses options will let you choose how cPige will cut
 // the stream. They are only revelent if pigemode is enabled
@@ -78,12 +76,12 @@ pigemeta   = 1
 // m => Minute based cut
 //
 // (m is the default)
-cuttype   = "m"
+cuttype   = "h"
 
 // How many hour(s)/minute(s) to backup ? 
 // (depends of cuttype)
 // (30 minutes is the default)
-cutdelay  = 30
+cutdelay  = 60
 
 
 ////////////////////////////////////////////////////////////
@@ -100,16 +98,13 @@ locale = "C"
 // to standard output the status of the backup.
 // (This option is turned 1 when running in background)
 // ONLY FOR UNIX
-// (Disabled by default)
 quietmode  = 0
 
 // Do you want cpige to run in background ? (as a daemon)
-// (Disabled by default)
 background = 0
 
 // Should cPige add nnnnn - Artist - Title to 
 // filenames saved with pige mode disabled.
-// (Disabled by default)
 usenumbers = 0
 
 // Where should I write my pid file ?
