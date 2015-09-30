@@ -1,4 +1,4 @@
-CC ?= clang
+CC ?= gcc
 CFLAGS +=-Wall
 
 ifeq ($(NOCONFIG),1)
