@@ -243,7 +243,7 @@ int main (int argc, char **argv)
   
   if (strncmp(icy_headers->content_type, "audio/mpeg", 10) == 0)
     extension = "mp3";
-  else if (strncmp(icy_headers->content_type, "audio/aacp", 10) == 0)
+  else if (strncmp(icy_headers->content_type, "audio/aac", 9) == 0)
     extension = "aac";
   else if (strncmp(icy_headers->content_type, "application/ogg", 15) == 0)
     extension = "ogg";
@@ -482,7 +482,7 @@ int main (int argc, char **argv)
           switch (cmdLine->intervalType)
           {
             case IVAL_HOUR:
-              /* Il me faut l'heure d'arrivée théorique, en seconde, du stream */
+              /* Il me faut l'heure d'arrivÃ©e thÃ©orique, en seconde, du stream */
               tmp1 = (getCloserInterval(getHour(), cmdLine->interval) + cmdLine->interval);
               stop_s = ((tmp1 * 3600) + (nowTmp - ((getHour()*3600) - getMinute() * 60) - getSec()));
               percentage = ((float)(1.0 - (((float)stop_s - (float)nowTmp) / ((float)cmdLine->interval*3600.0))) * 100.0);
@@ -821,7 +821,7 @@ char *readMeta(int serversocket)
 
 
 /* Lorsque le serveur envoie: "StreamTitle='TITREZIK';"
- * On ne récupère avec cette fonction que TITREZIK.
+ * On ne rÃ©cupÃ¨re avec cette fonction que TITREZIK.
  */
 
 char *getTitle(char *titleString)
