@@ -243,9 +243,7 @@ int main (int argc, char **argv)
   
   if (strncmp(icy_headers->content_type, "audio/mpeg", 10) == 0)
     extension = "mp3";
-  else if (strncmp(icy_headers->content_type, "audio/aacp", 10) == 0)
-    extension = "aac";
-  else if (strncmp(icy_headers->content_type, "audio/aac", 10) == 0)
+  else if (strncmp(icy_headers->content_type, "audio/aac", 9) == 0)
     extension = "aac";
   else if (strncmp(icy_headers->content_type, "application/ogg", 15) == 0)
     extension = "ogg";
