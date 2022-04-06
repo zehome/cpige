@@ -150,22 +150,22 @@ int server_close (int serversocket)
 int sendHeaders(int serversocket, char *mountpoint, int metadata)
 {
   int ret = 0;
-  char headers[256 + sizeof(USER_AGENT) + 16 + 11 + 4];
-  
+  char headers[256 + sizeof(USER_AGENT) + 17 + 12 + 5];
+
   if (mountpoint == NULL)
     snprintf(headers, 255, "GET / HTTP/1.0\r\n");
   else
     snprintf(headers, 255, "GET %s HTTP/1.0\r\n", mountpoint);
 
   if (metadata != 0)
-    strncat(headers, "Icy-MetaData:1\r\n", 16);
+    strncat(headers, "Icy-MetaData:1\r\n", 17);
   else
-    strncat(headers, "Icy-MetaData:0\r\n", 16);
+    strncat(headers, "Icy-MetaData:0\r\n", 17);
 
-  strncat(headers, "User-Agent:", 11);
-  strncat(headers, USER_AGENT, sizeof(USER_AGENT));
-  strncat(headers, "\r\n\r\n", 4);
-  
+  strncat(headers, "User-Agent:", 12);
+  strncat(headers, USER_AGENT, sizeof(USER_AGENT)+1);
+  strncat(headers, "\r\n\r\n", 5);
+
   ret = send(serversocket, headers, strlen(headers), 0);
   return ret;
 }

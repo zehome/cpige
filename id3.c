@@ -14,7 +14,7 @@ char *GetId3v1(char *titre, char *artiste, char *radioName)
   chunk = (char *)memory_allocation(128);
   
   /* id3v1 tag */
-  strncat(chunk, "TAG", 3);
+  strncat(chunk, "TAG", 4);
   
   /* Title */
   relativePointer = chunk + 3; /* 3 octets */

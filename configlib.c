@@ -118,7 +118,7 @@ confObj_t *_conf_parseLine( char *line )
 {
   int i, j, k;
   int linelen, len;
-  int quote, space, state;
+  int quote, space;
   char *buf;
   char c;
   void *ptr;
@@ -131,7 +131,7 @@ confObj_t *_conf_parseLine( char *line )
   confObj = (confObj_t *)calloc(1, sizeof(confObj_t));
   buf = calloc(linelen, 1);
   
-  for (i = 0, quote = 0, space = 0, j = 0, state = 0; i < linelen; i++) 
+  for (i = 0, quote = 0, space = 0, j = 0; i < linelen; i++) 
   {
     c = line[i];
     
@@ -152,7 +152,6 @@ confObj_t *_conf_parseLine( char *line )
           return NULL;
         }
         
-        state = 1;
         buf[j] = 0;
         j = 0;
         len = strlen(buf);
@@ -360,7 +359,9 @@ void set_str_from_conf(config_t *config, char *type, char **value, char *def, ch
 
   if (*value == NULL) 
   {
-    fprintf(stderr, errMsg);
+  	if (errMsg) {
+	    fprintf(stderr, errMsg);
+	}
     if (def != NULL)
       *value = strdup(def);
     if (exit_n > 0)

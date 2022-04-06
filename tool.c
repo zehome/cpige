@@ -7,7 +7,7 @@
 serverSettings_t *parseURL(const char *url)
 {
   serverSettings_t *settings;
-  int i, j, k;
+  int i, j;
   short flag = 0;
   char c;
   char *tmpPort;
@@ -31,7 +31,7 @@ serverSettings_t *parseURL(const char *url)
   settings->port = 80;
   settings->mountpoint = "/";
   settings->serverAddr = NULL;
-  for (i = 0, j = 0, k = 0; i <= strlen(url); i++)
+  for (i = 0, j = 0; i <= strlen(url); i++)
   {
     c = url[i];
 

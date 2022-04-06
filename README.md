@@ -1,9 +1,6 @@
-====================================
-cPige - archiving tool for webradios
-====================================
+### cPige - archiving tool for webradios
 
-Quick start
-===========
+# Quick start
 
 ```shell
 wget https://github.com/zehome/cpige/releases/download/cpige-1.6/{cpige_linux_x86_64,cpige.conf.example}
@@ -15,19 +12,16 @@ vim cpige.conf
 ./cpige_linux_x86_64 -c cpige.conf
 ```
 
-Command line options
-====================
+# Command line options
 ```
     -c path/to/cpige.conf
 ```
 
-Download
-========
+# Download
 
 https://github.com/zehome/cpige/releases/latest
 
-Using the GUI
-=============
+# Using the GUI
 A GTK2 GUI is now available for cPige, but you'll need to build it yourself:
 ```shell
 cd gui; ./configure && make
