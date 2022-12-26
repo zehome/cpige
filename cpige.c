@@ -1299,8 +1299,10 @@ commandLine *parseCommandLine(int argc, char **argv)
 
   if (cmdLine->dir == NULL)
     cmdLine->dir = strdup("./");
- 
+
+#ifndef NOCONFIG
   _conf_freeConfig(conf);
+#endif
   /* Don't forget to free it on exit ! */
   return cmdLine;
 }

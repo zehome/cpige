@@ -360,7 +360,7 @@ void set_str_from_conf(config_t *config, char *type, char **value, char *def, ch
   if (*value == NULL) 
   {
   	if (errMsg) {
-	    fprintf(stderr, errMsg);
+	    fprintf(stderr, "%s", errMsg);
 	}
     if (def != NULL)
       *value = strdup(def);
@@ -379,7 +379,7 @@ void set_int_from_conf(config_t *config, char *type, int *value, int def, char *
   
   if ( tmp == NULL )
   {
-    fprintf(stderr, errMsg);
+    fprintf(stderr, "%s", errMsg);
     *value = def;
     if (exit_n > 0)
     {
@@ -399,7 +399,7 @@ void set_bool_from_conf(config_t *config, char *type, int *value, int def, char 
   
   if ( tmp == NULL )
   {
-    fprintf(stderr, errMsg);
+    fprintf(stderr, "%s", errMsg);
     *value = def;
     if (exit_n > 0)
     {
